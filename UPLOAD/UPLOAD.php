@@ -93,7 +93,7 @@ class UPIMAGES{
 		exit;
 	}
 
-	$imageFileName = sha1(time() . mt_rand(). $ext);
+	$imageFileName = sha1(time() . mt_rand()) . $ext;
 	$imageFilePath = IMG_DIR . '/' . $imageFileName;
 
 	$rs = move_uploaded_file($value['tmp_name'], $imageFilePath);
